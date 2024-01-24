@@ -8,7 +8,7 @@ import {
 
 const appSettings = {
   databaseURL:
-    'https://realtime-database-df319-default-rtdb.europe-west1.firebasedatabase.app/',
+  'https://playground-5b289-default-rtdb.europe-west1.firebasedatabase.app/',
 };
 
 const app = initializeApp(appSettings);
