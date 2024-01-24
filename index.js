@@ -47,7 +47,7 @@ onValue(shoppingListInDB, function (snapshot) {
   
 });
 
-function clearInputFieldEl(){
+function clearShoppingListEl(){
   shoppingListEl.innerHTML = ""
 }
 
