@@ -3,6 +3,7 @@ import {
   getDatabase,
   ref,
   push,
+  onValue
 } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';
 
 const appSettings = {
@@ -35,7 +36,14 @@ shoppingListInDB as the first argument and
 function(snapshot) {} as the second argument
 */
 
-onValue(shoppingListInDB, function (snapshot) {});
+onValue(shoppingListInDB, function (snapshot) {
+  let itemsArray = Object.values(snapshot.val())
+  for (let i = 0; i < itemsArray.length; i++){
+
+    console.log(itemsArray[i])
+  }
+  
+});
 
 function clearInputFieldEl() {
   inputFieldEl.value = '';
