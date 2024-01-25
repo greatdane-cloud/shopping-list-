@@ -8,7 +8,7 @@ import {
 
 const appSettings = {
   databaseURL:
-  'https://playground-5b289-default-rtdb.europe-west1.firebasedatabase.app/',
+  "https://playground-5b289-default-rtdb.europe-west1.firebasedatabase.app/",
 };
 
 const app = initializeApp(appSettings);
@@ -38,14 +38,14 @@ function(snapshot) {} as the second argument
 
 onValue(shoppingListInDB, function (snapshot) {
   let itemsArray = Object.values(snapshot.val())
+
+  clearShoppingListEl()
+
   for (let i = 0; i < itemsArray.length; i++){
-
-    clearShoppingListEl()
-
     appendItemToShoppingListEl(itemsArray[i])
   }
-  
-});
+
+  });
 
 function clearShoppingListEl(){
   shoppingListEl.innerHTML = ""
